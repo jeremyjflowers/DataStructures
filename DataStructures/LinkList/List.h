@@ -29,3 +29,111 @@ private:
 	Node<T> m_tail;
 	int m_nodeCount;
 };
+
+template<typename T>
+inline List<T>::List()
+{
+}
+
+template<typename T>
+inline List<T>::List(List<T>&)
+{
+}
+
+template<typename T>
+inline void List<T>::destroy()
+{
+	system("delete");
+}
+
+template<typename T>
+inline Iterator<T> List<T>::begin()
+{
+	return Iterator<T>();
+}
+
+template<typename T>
+inline Iterator<T> List<T>::end()
+{
+	return Iterator<T>();
+}
+
+template<typename T>
+inline bool List<T>::contains(const T& object) const
+{
+	return false;
+}
+
+template<typename T>
+inline void List<T>::pushFront(const T& value)
+{
+
+}
+
+template<typename T>
+inline void List<T>::pushBack(const T& value)
+{
+	value.previous->m.tail;
+	value.next->nullptr;
+	m_tail = value;
+}
+
+template<typename T>
+inline bool List<T>::insert(const T& value, int index)
+{
+	return false;
+}
+
+template<typename T>
+inline bool List<T>::remove(const T& value)
+{
+	return m_nodeCount;
+}
+
+template<typename T>
+inline void List<T>::print() const
+{
+}
+
+template<typename T>
+inline void List<T>::initialize()
+{
+}
+
+template<typename T>
+inline bool List<T>::isEmpty() const
+{
+	if (isEmpty == false)
+	{
+		getData();
+	}
+	else()
+	{
+		return true;
+	}
+
+	return true;
+}
+
+template<typename T>
+inline bool List<T>::getData(Iterator<T>& iter, int index)
+{
+	return false;
+}
+
+template<typename T>
+inline int List<T>::getLength() const
+{
+	return 0;
+}
+
+template<typename T>
+inline const List<T>& List<T>::operator=(const List<T>& otherList)
+{
+	// TODO: insert return statement here
+}
+
+template<typename T>
+inline void List<T>::sort()
+{
+}
