@@ -9,8 +9,8 @@ public:
 	List(List<T>&);
 	~List();
 	void destroy();
-	Iterator<T> begin();
-	Iterator<T> end();
+	Iterator<T> begin() const;
+	Iterator<T> end() const;
 	bool contains(const T& object) const;
 	void pushFront(const T& value);
 	void pushBack(const T& value);
@@ -33,6 +33,7 @@ private:
 template<typename T>
 inline List<T>::List()
 {
+
 }
 
 template<typename T>
@@ -43,18 +44,19 @@ inline List<T>::List(List<T>&)
 template<typename T>
 inline void List<T>::destroy()
 {
-	system("delete");
 }
 
 template<typename T>
-inline Iterator<T> List<T>::begin()
+inline Iterator<T> List<T>::begin() const
 {
+	Iterator<int> iter = *m_head;
 	return Iterator<T>();
 }
 
 template<typename T>
-inline Iterator<T> List<T>::end()
+inline Iterator<T> List<T>::end() const
 {
+	Iterator<int> iter = *m_tail;
 	return Iterator<T>();
 }
 
@@ -67,7 +69,9 @@ inline bool List<T>::contains(const T& object) const
 template<typename T>
 inline void List<T>::pushFront(const T& value)
 {
-
+	value.previous->nullptr;
+	value.next->m_head;
+	m_head = value;
 }
 
 template<typename T>
@@ -87,12 +91,16 @@ inline bool List<T>::insert(const T& value, int index)
 template<typename T>
 inline bool List<T>::remove(const T& value)
 {
-	return m_nodeCount;
+	return false;
 }
 
 template<typename T>
 inline void List<T>::print() const
 {
+	for (Iterator<int> iter = begin(); iter != end(); ++iter)
+	{
+		std::cout << *iter << std::endl;
+	}
 }
 
 template<typename T>
@@ -103,16 +111,12 @@ inline void List<T>::initialize()
 template<typename T>
 inline bool List<T>::isEmpty() const
 {
-	if (isEmpty == false)
+	if (isEmpty() == false)
 	{
-		getData();
-	}
-	else()
-	{
-		return true;
+
 	}
 
-	return true;
+	return false;
 }
 
 template<typename T>
@@ -124,13 +128,14 @@ inline bool List<T>::getData(Iterator<T>& iter, int index)
 template<typename T>
 inline int List<T>::getLength() const
 {
+
 	return 0;
 }
 
 template<typename T>
 inline const List<T>& List<T>::operator=(const List<T>& otherList)
 {
-	// TODO: insert return statement here
+	return 0;
 }
 
 template<typename T>

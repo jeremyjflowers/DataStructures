@@ -20,7 +20,7 @@ private:
 template<typename T>
 inline Iterator<T>::Iterator()
 {
-	Iterator iterator = m_current;
+	Iterator<int> iter = m_current;
 }
 
 template<typename T>
@@ -32,7 +32,7 @@ inline Iterator<T>::Iterator(Node<T>* node)
 template<typename T>
 inline Iterator<T> Iterator<T>::operator++()
 {
-	Iterator temp = *this;
+	Iterator<float> temp = *this;
 	nodePtr = nodePtr->next;
 	return temp;
 }
@@ -40,7 +40,7 @@ inline Iterator<T> Iterator<T>::operator++()
 template<typename T>
 inline Iterator<T> Iterator<T>::operator--()
 {
-	Iterator temp = *this;
+	Iterator<float> temp = *this;
 	nodePtr = nodePtr->previous;
 	return temp;
 }
@@ -60,5 +60,5 @@ inline const bool Iterator<T>::operator!=(const Iterator<T>& iter)
 template<typename T>
 inline T Iterator<T>::operator*()
 {
-	return ;
+	return T();
 }
