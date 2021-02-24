@@ -75,15 +75,15 @@ inline void List<T>::destroy()
 template<typename T>
 inline Iterator<T> List<T>::begin() const
 {
-	Iterator<int> iter = *m_head;
-	return Iterator<T>();
+	Node<T> *m_head;
+	return m_head;
 }
 
 template<typename T>
 inline Iterator<T> List<T>::end() const
 {
-	Iterator<int> iter = *m_tail;
-	return Iterator<T>();
+	Node<T> *m_tail;
+	return m_tail;
 }
 
 template<typename T>
@@ -124,7 +124,7 @@ inline void List<T>::pushBack(const T& value)
 template<typename T>
 inline bool List<T>::insert(const T& value, int index)
 {
-	Node<T>* temp = Node<T>(value);
+	Node<T>* temp = &Node<T>(value);
 	bool isInserted = false;
 
 	if (m_head.previous != temp)
