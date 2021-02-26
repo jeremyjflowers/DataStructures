@@ -3,12 +3,15 @@
 
 int main()
 {
-	List<char>* list = new List<char>();
+	List<int>* linkListTest = new List<int>();
 
-	list->insert(5, 1);
-	list->insert(10, 2);
+	linkListTest->pushFront(9);
+	linkListTest->pushFront(3);
+	linkListTest->pushFront(1);
+	linkListTest->pushFront(7);
+	linkListTest->pushFront(8);
+	linkListTest->pushFront(5);
 
-	list->print();
+	linkListTest->print();
 
-	system("pause");
 }
