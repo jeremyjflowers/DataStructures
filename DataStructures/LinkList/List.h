@@ -91,18 +91,22 @@ inline bool List<T>::contains(const T& object) const
 template<typename T>
 inline void List<T>::pushFront(const T& value)
 {
-	value.previous = nullptr;
-	value.next = m_head;
-	m_head = value;
+	Node<T>* tempNode = new Node<T>(value);
+	m_head->previous = tempNode;
+	tempNode->next = m_head;
+	tempNode->previous = nullptr;
+	m_first = tempNode;
 }
 
 //Adds a new node at the back of the list
 template<typename T>
 inline void List<T>::pushBack(const T& value)
 {
-	value.previous = m_tail;
-	value.next = nullptr;
-	m_tail = value;
+	Node<T>* tempNode = new Node<T>(value);
+	m_last->next = tempNode;
+	tempNode->previous = m_last;
+	tempNode->next = nullptr;
+	m_last = tempNode;
 }
 
 //Places a new node at a given spot in the index
